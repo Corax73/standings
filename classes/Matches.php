@@ -6,6 +6,11 @@ class Matches
     private string $teams;
     private string $stadium;
 
+    /**
+     * @param string $date
+     * @param string $teams
+     * @param string $stadium
+     */
     public function __construct(string $date, string $teams, string $stadium)
     {
         $this -> date = $date;
@@ -13,16 +18,25 @@ class Matches
         $this -> stadium = $stadium;
     }
 
+    /**
+     * @return string
+     */
     public function getDate(): string
     {
         return $this -> date;
     }
 
+    /**
+     * @return string
+     */
     public function getTeams(): string
     {
         return $this -> teams;
     }
 
+    /**
+     * @return string
+     */
     public function getStadium(): string
     {
         return $this -> stadium;

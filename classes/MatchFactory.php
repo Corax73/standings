@@ -11,6 +11,7 @@ class MatchFactory
      */
     public function createMatchCollection(array $games, array $dates, array $stadiums): array
     {
+        $matches = [];
         for ($i = 0; $i < count($games); $i++) {
             $index = mt_rand(0, count($dates) - 1);
             $date = $dates[$index];

@@ -1,5 +1,5 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/cli.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +14,19 @@ include $_SERVER['DOCUMENT_ROOT'] . '/cli.php';
 <body>
 <div class="container">
   <div class="row">
+    <div class="col-sm">
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="input-team">Enter your commands separated by commas</label>
+                <input id="input-team" name="team" type="text" placeholder="Enter team">
+            </div>
+            <div class="form-group">
+                <label for="input-stadium">Enter your stadiums separated by commas</label>
+                <input id="input-stadium" name="stadium" type="text" placeholder="Enter stadium">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
     <div class="col-sm">
     <table id="teams">
         <tr>
@@ -37,9 +50,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/cli.php';
         <?php
         foreach ($matches as $match) {?> 
         <tr>
-        <td><?php print $match -> getDate(); ?></td>
-        <td class="match"><?php print $match -> getTeams(); ?></td>
-        <td><?php print $match -> getStadium(); ?></td>
+        <td><?php print $match -> getDate();?></td>
+        <td class="match"><?php print $match -> getTeams();?></td>
+        <td><?php print $match -> getStadium();?></td>
         </tr>
         <?php } ?>      
     </table>

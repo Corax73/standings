@@ -12,6 +12,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1>Compilation of the table of competitions</h1>
 <div class="container">
   <div class="row">
     <div class="col-sm">

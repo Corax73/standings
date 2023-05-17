@@ -14,7 +14,7 @@ class GamesFactory
         for ($i = 0; $i < count($teams); $i++) {
             for ($ii = 1; $ii < count($teams); $ii++) {
                 if ($i + $ii < count($teams)) {
-                    $games[] = $teams[$i] . ' vs ' . $teams[$i + $ii];
+                    $games[] = (string)$teams[$i] . ' vs ' . (string)$teams[$i + $ii];
                 }
             }
         }

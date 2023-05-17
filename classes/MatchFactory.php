@@ -15,7 +15,7 @@ class MatchFactory
         for ($i = 0; $i < count($games); $i++) {
             $index = mt_rand(0, count($dates) - 1);
             $date = $dates[$index];
-            $matches[] = new Matches($date, $games[$i], $stadiums[mt_rand(0, count($stadiums) - 1)]);
+            $matches[] = new Matches($date, (string)$games[$i], (string)$stadiums[mt_rand(0, count($stadiums) - 1)]);
             unset($dates[$index]);
             $dates = array_values($dates);
         }

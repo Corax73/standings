@@ -5,41 +5,12 @@ spl_autoload_register(function ($class_name) {
 
 $teams = [];
 $stadiums = [];
-/*$teams = [
-    'team1',
-    'team2',
-    'team3',
-    'team4',
-    'team5',
-    'team6',
-    'team7',
-    'team8',
-    'team9',
-    'team10',
-    'team11',
-    'team12'
-];
-$stadiums = [
-    'stadium1',
-    'stadium2',
-    'stadium3',
-    'stadium4',
-    'stadium5'
-];*/
 
 if (!empty($_POST)) {
-    $team = trim(htmlspecialchars($_POST['team']));
-    $stadium = trim(htmlspecialchars($_POST['stadium']));
-    
-    $teams = explode(',', $team);
-    $teams = array_map(function($str) {
-        return trim($str);
-    }, $teams);
-    
-    $stadiums = explode(',', $stadium);
-    $stadiums = array_map(function($str) {
-        return trim($str);
-    }, $stadiums);
+    $cleaning = new InputCleaning();
+
+    $teams = $cleaning -> clean($_POST['team']);
+    $stadiums = $cleaning -> clean($_POST['team']);
 }
 
 if (!empty($teams) && !empty($stadiums)) {

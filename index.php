@@ -25,6 +25,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
                 <label for="input-stadium">Enter your stadiums separated by commas</label>
                 <input id="input-stadium" name="stadium" type="text" placeholder="Enter stadium">
             </div>
+            <div class="form-group">
+                <label for="date">Enter time interval:</label>
+                <p>Start</p>
+                <input type="date" id="dateStart" name="dateStart">
+                <p>Stop</p>
+                <input type="date" id="dateStop" name="dateStop">
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

@@ -17,9 +17,9 @@ if (!empty($teams) && !empty($stadiums)) {
     $fabric = new GamesFactory;
     $games = $fabric -> createGamesCollection($teams);
 
-    $start = '1.05.2023';
+    $start = $_POST['dateStart'];
+    $end = $_POST['dateStop'];
     $interval = 'P1D';
-    $end = '31.07.2023 23:59';
     
     $fabric = new DatesFactory();
     $dates = $fabric -> createDatesCollection($start, $interval, $end);

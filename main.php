@@ -26,6 +26,10 @@ if (!empty($teams) && !empty($stadiums)) {
     
     $fabric = new MatchFactory();
     $matches = $fabric -> createMatchCollection($games, $dates, $stadiums);
+
+    $saver = new FileSaver();
+
+    $path = $saver -> saveResult($matches);
 } else {
     $teams = [];
     $matches = [];

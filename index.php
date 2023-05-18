@@ -35,6 +35,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+    <?php
+    if (isset($path)) {?>
+    <div class="col-sm">
+        <a href="<?php print $path ?>" download>
+            <button>Скачать</button>
+        </a>
+    </div>
+    <?php } ?>
     <div class="col-sm">
     <table id="teams">
         <tr>

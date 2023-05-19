@@ -19,18 +19,20 @@ include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
         <form action="" method="POST">
             <div class="form-group">
                 <label for="input-team">Enter your commands separated by commas</label>
-                <input id="input-team" name="team" type="text" placeholder="Enter team">
+                <input id="input-team" name="team" type="text" placeholder="Enter team" required>
             </div>
             <div class="form-group">
                 <label for="input-stadium">Enter your stadiums separated by commas</label>
-                <input id="input-stadium" name="stadium" type="text" placeholder="Enter stadium">
+                <input id="input-stadium" name="stadium" type="text" placeholder="Enter stadium" required>
             </div>
             <div class="form-group">
+                <p>Потребуется дней для всех игр:</p>
+                <p id="timing">0</p>
                 <label for="date">Enter time interval:</label>
                 <p>Start</p>
-                <input type="date" id="dateStart" name="dateStart">
+                <input type="date" id="dateStart" name="dateStart" required>
                 <p>Stop</p>
-                <input type="date" id="dateStop" name="dateStop">
+                <input type="date" id="dateStop" name="dateStop" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -76,5 +78,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
     </div>
 </div>
 <script src="js/highlighting.js"></script>
+<script src="js/timinghint.js"></script>
 </body>
 </html>

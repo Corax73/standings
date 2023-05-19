@@ -34,7 +34,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
                 <p>Stop</p>
                 <input type="date" id="dateStop" name="dateStop" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
     <?php

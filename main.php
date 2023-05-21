@@ -10,7 +10,7 @@ if (!empty($_POST)) {
     $cleaning = new InputCleaning();
 
     $teams = $cleaning -> clean($_POST['team']);
-    $stadiums = $cleaning -> clean($_POST['team']);
+    $stadiums = $cleaning -> clean($_POST['stadium']);
 }
 
 if (!empty($teams) && !empty($stadiums)) {

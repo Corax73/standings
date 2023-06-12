@@ -33,7 +33,7 @@ class DatesFactoryTest extends TestCase
         );
     }
 
-    public function testReturnType()
+    public function testReturnType(): void
     {
         $result = $this -> datesFactory -> createDatesCollection('2023-06-12', 'P1D', '2023-06-14');
         $testArr = [

@@ -7,7 +7,7 @@ class DatesFactory
      * @param string $interval
      * @param string $interval
      * @return array
-     * creating a collection of games
+     * creating a collection of dates
      */
     public function createDatesCollection(string $start, string $interval, string $end): array
     {

@@ -1,0 +1,1 @@
+{"version":1,"defects":{"KennelTest::testCreateDatesFactory":4,"DatesFactoryTest::testCreateDatesFactory":3,"DatesFactoryTest::testReturnType":3},"times":{"KennelTest::testCreateDatesFactory":0.008,"DatesFactoryTest::testCreateDatesFactory":0.009,"DatesFactoryTest::testReturnType":0.001}}

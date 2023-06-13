@@ -31,9 +31,9 @@ class FileSaverTest extends TestCase
 
     public function testReturnType(): void
     {
-        $matches[] = new Matches('12.06.2023', 'a  vs b', 's1');
-        $matches[] = new Matches('13.06.2023', 'a  vs c', 's2');
-        $matches[] = new Matches('14.06.2023', 'c  vs b', 's3');
+        $matches[] = new Matches('12.06.2023', 'a vs b', 's1');
+        $matches[] = new Matches('13.06.2023', 'a vs c', 's2');
+        $matches[] = new Matches('14.06.2023', 'c vs b', 's3');
         
         $result = $this->fileSaver->saveResult($matches);
 

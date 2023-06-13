@@ -13,16 +13,12 @@ class InputCleaningTest extends TestCase
  
     protected function setUp(): void
     {
-
-        $this -> inputCleaning = new InputCleaning();
-
+        $this->inputCleaning = new InputCleaning();
     }
  
     protected function tearDown(): void
     {
-
-        $this -> inputCleaning = NULL;
-
+        $this->inputCleaning = NULL;
     }
 
     public function testCreateInputCleaning(): void
@@ -35,7 +31,7 @@ class InputCleaningTest extends TestCase
 
     public function testReturnType(): void
     {
-        $result = $this -> inputCleaning -> clean('a,   b1 , <br>  , <meta http-equiv="refresh" content="0;URL=http://site.ru"/>');
+        $result = $this->inputCleaning->clean('a,   b1 , <br>  , <meta http-equiv="refresh" content="0;URL=http://site.ru"/>');
         $testArr = [
             'a',
             'b1 ',

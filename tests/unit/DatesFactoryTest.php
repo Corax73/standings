@@ -13,16 +13,12 @@ class DatesFactoryTest extends TestCase
  
     protected function setUp(): void
     {
-
-        $this -> datesFactory = new DatesFactory();
-
+        $this->datesFactory = new DatesFactory();
     }
  
     protected function tearDown(): void
     {
-
-        $this -> datesFactory = NULL;
-
+        $this->datesFactory = NULL;
     }
 
     public function testCreateDatesFactory(): void
@@ -35,7 +31,7 @@ class DatesFactoryTest extends TestCase
 
     public function testReturnType(): void
     {
-        $result = $this -> datesFactory -> createDatesCollection('2023-06-12', 'P1D', '2023-06-14');
+        $result = $this->datesFactory->createDatesCollection('2023-06-12', 'P1D', '2023-06-14');
         $testArr = [
             '12.06.2023',
             '13-06-2023'

@@ -1,5 +1,11 @@
 <?php
 
+namespace Table\Classes;
+
+use DatePeriod;
+use DateTime;
+use DateInterval;
+
 class DatesFactory
 {
      /**

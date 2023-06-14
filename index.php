@@ -1,4 +1,5 @@
 <?php
+require_once "vendor/autoload.php";
 include $_SERVER['DOCUMENT_ROOT'] . '/main.php';
 ?>
 <!DOCTYPE html>

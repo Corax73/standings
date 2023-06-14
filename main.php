@@ -1,7 +1,12 @@
 <?php
-spl_autoload_register(function ($class_name) {
-    include 'classes/' . $class_name . '.php';
-});
+
+namespace Table\Classes;
+
+use Table\Classes\InputCleaning;
+use Table\Classes\GamesFactory;
+use Table\Classes\DatesFactory;
+use Table\Classes\MatchFactory;
+use Table\Classes\FileSaver;
 
 $teams = [];
 $stadiums = [];

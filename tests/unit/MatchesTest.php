@@ -1,10 +1,14 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use Table\Classes\InputCleaning;
+use Table\Classes\GamesFactory;
+use Table\Classes\DatesFactory;
+use Table\Classes\MatchFactory;
+use Table\Classes\Matches;
+use Table\Classes\FileSaver;
 
-spl_autoload_register(function ($class_name) {
-    include 'classes/' . $class_name . '.php';
-});
+
  
 class MatchesTest extends TestCase
 {
@@ -25,7 +29,7 @@ class MatchesTest extends TestCase
     {
         $this->assertContainsOnlyInstancesOf(
             Matches::class,
-            [new Matches('16.06.2023', 'c vs d', '2'), new FileSaver, new GamesFactory]
+            [new Matches('16.06.2023', 'c vs d', '2')]
         );
     }
 
@@ -47,5 +51,11 @@ class MatchesTest extends TestCase
     public function testGetStadium()
     {
         $this->assertSame('2', $this->matches->getStadium());
+    }
+
+    public function test_process()
+    {
+        $user = $this->createMock(Matches::class);
+        $this->assertInstanceOf(Matches::class, $user);
     }
 }

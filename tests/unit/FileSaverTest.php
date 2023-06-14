@@ -2,9 +2,12 @@
 
 use PHPUnit\Framework\TestCase;
 
-spl_autoload_register(function ($class_name) {
-    include 'classes/' . $class_name . '.php';
-});
+use Table\Classes\InputCleaning;
+use Table\Classes\GamesFactory;
+use Table\Classes\DatesFactory;
+use Table\Classes\MatchFactory;
+use Table\Classes\Matches;
+use Table\Classes\FileSaver;
  
 class FileSaverTest extends TestCase
 {
@@ -40,5 +43,17 @@ class FileSaverTest extends TestCase
         $testArr = 'output/' . date('Y-m-d-H-i-s') . '.csv';
 
         $this->assertSame($result, $testArr);
+    }
+
+    public function testFileExists()
+    {
+        $matches[] = new Matches('12.06.2023', 'a vs b', 's1');
+        $matches[] = new Matches('13.06.2023', 'a vs c', 's2');
+        $matches[] = new Matches('14.06.2023', 'c vs b', 's3');
+        
+        $this->fileSaver->saveResult($matches);
+
+        $testArr = 'output/' . date('Y-m-d-H-i-s') . '.csv';
+        $this->assertFileExists($testArr);
     }
 }

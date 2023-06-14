@@ -1,5 +1,7 @@
 <?php
 
+namespace Table\Classes;
+
 class Matches
 {
     private string $date;

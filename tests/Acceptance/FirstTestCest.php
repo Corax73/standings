@@ -30,4 +30,15 @@ class FirstTestCest
         $I->amOnPage('/');
         $I->see('1');
     }
+
+    public function tryToTest4(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->fillField('team', 'a, b, c');
+        $I->fillField('stadium','1, 2');
+        $I->fillField('dateStart', '16.06.2023');
+        $I->fillField('dateStop','21.06.2023');
+        $I->click('submitBtn');
+        $I->see('Скачать');
+    }
 }
